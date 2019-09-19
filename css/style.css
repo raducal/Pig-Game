@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #3c70a4;
+  height: 100vh;
+  padding-top: 90px;
+}
+
+.container {
+  text-align: center;
+  width: 70%;
+  height: 90%;
+  margin: auto;
+  background-color: #d9eeec;
+  position: relative;
+  border-radius: 50px;
+}
+
+/* player box */
+
+.players {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.player {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-name {
+  padding-bottom: 2rem;
+  font-size: 2.2rem;
+}
+
+.player-score {
+  font-size: 2.2rem;
+  padding-bottom: 7rem;
+}
+
+/* current box */
+
+.current-score-box {
+  height: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 6.3rem;
+  background-color: #64b2cd;
+}
+
+.title {
+  font-size: 2.2rem;
+  padding: 10px 0 0 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.dice img {
+  position: absolute;
+  right: 655px;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.dice img.active {
+  display: block;
+}
+
+button {
+  position: absolute;
+  /* left: 0; */
+  border: none;
+  width: 9rem;
+  padding: 1rem 2rem;
+  background-color: #202060;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.9rem;
+  display: inline-block;
+  border-radius: 50px;
+}
+
+button:hover {
+  background-color: #64b2cd;
+  color: #000;
+}
+
+.btn-new {
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, 0);
+}
+
+.btn-roll {
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, 0);
+}
+
+.btn-hold {
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, 0);
+}
+
+/* modal */
+.modal {
+  position: absolute;
+  border: 2px solid #000;
+  border-radius: 50px;
+  z-index: 1;
+  height: 50%;
+  width: 55%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: grey;
+  display: none;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal .congrats-player {
+  display: flex;
+  font-size: 3rem;
+  padding-bottom: 1rem;
+  margin-top: -35px;
+}
+
+.modal .message-1,
+.modal .message-2 {
+  display: flex;
+  font-size: 2rem;
+}
+
+.modal .message-2 {
+  padding-bottom: 5px;
+}
+
+form .score-input {
+  width: 100%;
+  height: 2rem;
+  display: none;
+  margin-top: 1.2rem 0 1rem 0;
+}
+
+form .score-input.active,
+form .btn-modal.active {
+  display: block;
+}
+
+form .btn-modal {
+  bottom: 10%;
+  background-color: #64b2cd;
+  color: #000;
+  display: none;
+}
+
+form .btn-modal:hover {
+  background-color: #202060;
+  color: #fff;
+}
